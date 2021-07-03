@@ -96,7 +96,7 @@ async def on_message(msg):
         text = "This poll has ended! Final results:"
         for react in pollmsg.reactions:
             if str(react) in valid_reacts:
-                text += f"\n{str(react)} - {react.count}"
+                text += f"\n{str(react)} - {react.count-1}"
         await pollmsg.reply(text)
 
 if __name__ == "__main__":
